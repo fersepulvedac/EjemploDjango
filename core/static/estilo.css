@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+    /* font-size: 1.2rem; */
+}
+
+.comprar{
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.comprar > a{
+    line-height: 50px;
+    background-color: #0C3F37;
+    color: #ffffff;
+    width: 200px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.comprar > a:hover{
+    background-color: #CE9864;
+}
+
+#menu-celu{
+    display: none;
+    flex-direction: column;
+    background-color: #CE9864;
+    padding: 10px 0px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+#menu-celu > a{
+    color: #0C3F37;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center;
+    font-weight: bolder;
+
+}
+
+h1{
+    font-size: 2.2rem;
+    text-align: center;
+    color: #0C3F37;
+    margin: 20px 0px;
+    font-weight: bolder;
+}
+
+header {
+    background-color: #0C3F37;
+    color: #FCFFDC;
+}
+
+header>.arriba {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    height: 10vh;
+    align-items: center;
+}
+
+nav>a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0px 20px;
+}
+
+#usuario {
+    height: 100%;
+    /* border: 1px red solid; */
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+}
+
+#usuario>a {
+    color: #ffffff;
+    display: block;
+    height: 40px;
+    background-color: #CE9864;
+    width: 100px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+#usuario>a:hover {
+    background-color: #ffffff;
+    color: #0C3F37;
+    transition-duration: 0.5s;
+}
+
+#logo {
+
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+header>.abajo{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+}
+
+.abajo > img { 
+    height: 90%;
+}
+
+.abajo > h1{
+    font-size: 3rem;
+    width: 20vw;
+    line-height: 7vh;
+    text-align: center;
+    color: #CE9864;
+}
+
+#catalogo{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    justify-content: space-evenly;
+    row-gap: 20px;
+}
+
+.planta{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    border: 2px #00000005 solid;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.cant-precio{
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.cantidad, .precio{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    /* border: 1px red solid; */
+}
+
+.cantidad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.precio{
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.tachado{
+    text-decoration: line-through;
+}
+
+.agregar{
+    background-color: #0C3F37;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    column-gap: 10px;
+    padding: 5px 10px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+
+.agregar:hover{
+    background-color: #CE9864;
+}
+
+footer{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    background-color: #CE9864;
+    margin-top: 40px;
+    column-gap: 40px;   
+}
+
+footer > div {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    justify-content: center;     
+}
+
+@media (max-width: 800px) {
+    .planta{
+        width: 25%;
+    }
+
+    header>.abajo{
+        justify-content: space-evenly;
+    }
+
+    .abajo > h1{
+        width: 40vw;
+    }
+
+    #menu-pc{
+        display: none;
+    }
+
+    #menu-celu{
+        display: flex;
+    }
+
+    footer > div{
+        font-size: .8rem;
+    }
+}
+
+/* LOGIN */
+#formlogin{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    height: 50vh;
+}
+
+#login, #registro{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    margin: 40px 0px;
+    /* z-index: -1; */
+}
+
+#login > input, #registro > input{
+    height: 2rem;
+    border: 1px #0C3F37 solid;
+    border-radius: 5px;
+    padding: 0px 10px;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+#botoneslogin {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#botoneslogin > button{ 
+    background-color: #0C3F37;
+    color: #ffffff;
+    width: 48%;
+    height: 2rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#botoneslogin > button:hover{ 
+    background-color: #CE9864;
+}
+
+#login > a, #registro > a{
+    color: #0C3F37;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#registro{
+    opacity: 0;
+    /* transform: rotate(-180deg); */
+}
+
+.hide{
+    transition-duration: 1s;
+    transform: translateY(0px);
+    opacity: 0;
+}
+
+.show{
+    transition-duration: 1s;
+    transform: translateY(-280px);
+    opacity: 1 !important;
+}
+
+.showLogin{
+    transition-duration: 1s;
+    transform: translateY(0px);
+    opacity: 1 !important;
+}
+
+#tablaProductos {
+     display: flex;
+     justify-content: center;
+}
+
+table{
+    width: 90%;
+}
+
+thead{
+    background-color: #0C3F37;
+    color: #ffffff;
+    height: 30px;
+    text-align: center;
+}
+
+th{
+    padding: 5px;
+}
+td{
+    text-align: center;
+}
+
+td > img{
+    height: 100px;
+}
+
+.icono {
+    border: 2px #cecece solid;
+    padding: 5px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.icono:hover {
+    background-color: #CE9864;
+}
+
+.agregarProducto {
+    display: flex;
+    border: 2px #cecece solid;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 5px 0px;
+}
+
+.agregarProducto:hover {
+    background-color: #CE9864;
+    color: #ffffff;
+}

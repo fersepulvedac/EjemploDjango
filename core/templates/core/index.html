@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Nuestros productos</h1>
+<section id="catalogo">
+    {% for planta in plantas %}
+    <div class="planta">
+        <div class="descripcion"></div>
+        <img src="{{ planta.imagen }}" alt="" class="imagen">
+        <div>
+            <div class="cant-precio">
+                <div class="cantidad">
+                    <span>quedan</span>
+                    <span>{{ planta.stock }}</span>
+                </div>
+                <div class="precio">
+                    <span class="tachado">{{ planta.tachado }}</span>
+                    <span>${{ planta.precio }}</span>
+                </div>
+            </div>
+            <div class="agregar">
+                <a href="{% url 'addtocar' planta.codigo %}">Agregar al carro</a>
+                <img src="{% static 'images/icons8_buy_24px_1.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+    {% endfor %}    
+</section>
+{% endblock %}
